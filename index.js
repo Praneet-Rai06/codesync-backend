@@ -7,6 +7,12 @@ const cors = require("cors");
 const app = express();
 app.use(cors());
 
+//New 
+app.get("/", (req, res) => {
+  res.status(200).send("CodeSync backend is running 🚀");
+});
+
+
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: { origin: "*" },
